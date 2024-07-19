@@ -1,0 +1,71 @@
+---
+title: Cheatsheet Exceel
+description: Kumpulan Cheatsheet Exceel
+sidebar:
+  # Set a custom label for the link
+  # Set a custom order for the link (lower numbers are displayed higher up)
+  order: 2
+ 
+---
+
+import { Badge } from '@astrojs/starlight/components';
+
+<Badge text="#Excel" variant="success" size="small" />
+<Badge text="#Cheatset" variant="success" size="small" />
+<Badge text="#Spreadsheet" variant="success" size="small" />
+
+### Fungsi text
+
+| Fungsi       | Definisi                                                                                                                                                                                                                                                   | Contoh                              | output               |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | -------------------- |
+| =LEFT        | ntar ini ngasih hasil data lu dari kiri                                                                                                                                                                                                                    | =LEFT("Gojo";2)                     | Go                   |
+| =RIGHT       | kek di atas tapi ini nge return dari Kanan                                                                                                                                                                                                                 | =RIGHT("Gojo";2)                    | jo                   |
+| =MID         | bukan midlane kek di ML ,ini ngambil teks dari tengah tapi disini ada tambahan 1 variabel buat nambahin berapa teks yang mau di ambil disini gw ambil 2 jadi hasilnya 2 huruf                                                                              | =MID("Gojo";2;2)                    | oj                   |
+| =LEN         | ini buat nge return berapa jumlah kata yang ada di data,cocok buat cek NIK yang dimana hurufnya harus tetap,misalnya kurang berarti invalid                                                                                                                | =LEN("Gojo")                        | 4                    |
+| =LOWER       | kalo rumus ini yang bikin semua text lu jadi huruf kecil semua                                                                                                                                                                                             | =LOWER("GOJo")                      | gojo                 |
+| =PROPER      | ini yang paling berguna soalnya ini yang ngebuat huruf jadi *Proper* alias bener kapitalnya                                                                                                                                                                | =PROPER("goJO")                     | Gojo                 |
+| =UPPER       | ini biasnya dipake buat lu yang buta atau ga liat text segede gaban tapi ga kebaca karna lu cuma bisa baca yang isinya text kapital semua kyak orang marah-marah                                                                                           | =UPPER("gojo")                      | GOJO                 |
+| =REPT        | ini buat ngulangin text sebanyak yang lu mau,disini gw contohin gw mau ngulangin kata 5 kali                                                                                                                                                               | =REPT("Gojo";5)                     | GojoGojoGojoGojoGojo |
+| =CONCATENATE | ini nge gabungin beberapa text buat di jadiin 1,ini bisa lu kreasiin beda dari =JOIN yang cuma nambah nambah doang,tapi memang ada kekurangannya,ntar lu juga paham dimana ga ada pembatasnya                                                              | =CONCATENATE("Blue";"Red";"Purple") | BlueRedPurple        |
+| =FIND        | ini buat ngasih tau berapa banyak data yang namanya sesuai sama data yang lu kasih,tapi inget ini tuh harus sesuai,soalnya kapital atau salah dikit aja bakal nge return data error atau value ga ada                                                      | =FIND(A1)";"Gojo")                  | 1                    |
+| =SEARCH      | ini mah sama aja kyak yang di atas cuma gw sendiri ga tau apa bedanya intinya begitulah,ntar error nya bisa lu mainin pake rumus logika if atau if else misalnya ga ketemu bakal ngereturn data apa,intinya ini kepake buat double rumus                   | =SEARCH(A1)";"Gojo")                |                      |
+| =TRIM        | NAH ini yang paling berguna ,soalnya ini bisa nge hapus spasi yang kelebihan jadi data yang valid,ini bisa lu kombo sama rumus proper jadi jangan lupa sama ni rumus buat ngebersihin data                                                                 | =TRIM(" Gomen    Amanai  ")         | Gomen Amanai         |
+| =VALUE       | ini buat nge convert text value jadi nomor,tpi kalo lu kerjain di spreadsheet bakal otomatis kok hasilnya jadi value nomor jadi gaperlu lu pake rumus ginian soalnya ga bakal beda hasilnya,sama nanti bakal return error kalo lu ngasih text kyak alfabet | =VALUE("1985")                      | 1985                 |
+
+### Fungsi Matematika
+*Karna ini fungsi matematika datanya setidaknya harus nomor bukan text*
+
+| Fungsi   | Definisi                                                                                                                                                                                                                                                                                                           | Contoh                                         | Output            |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- | ----------------- |
+| =SUM     | ini fungsinya buat ngejumlahin semua nominal yang ada di data                                                                                                                                                                                                                                                      | =SUM("598";"599":"600":"601":"602")            | ♥3000             |
+| =PRODUCT | inget ini bukan artinya buat nge iniin produk atau gimana,ini sama kyak SUM cuma bedanya ini perkalian                                                                                                                                                                                                             | =PRODUCT("5";"5")                              | 25                |
+| =SQRT    | kalo ini rumus buat ngembaliin akar kuadrat dari sebuah angka,biasanya kepake buat lu yang ngurusin data ekperimen atau semacamnya,bodoamat gw ga pernah pake ini rumus intinya bingung gw sama matematika                                                                                                         | =SQRT("9.000.000")                             | ♥3000             |
+| =FACT    | hampir sama yang di atas,sama sama bikin gw pusing,intinya ini ngereturn Nomor faktorial dari data lu                                                                                                                                                                                                              | =FACT("8")                                     | 40320             |
+| =SUMIF   | Kalo yang ini berguna buat lu ngejumlahin berapa data yang spesifik,biasanya ini dipake di laporan penjualan,ntar ada tabel jenis jualan contohnya lu jualan Laptop,Handohone,earpod,lu mau ngejumlahin berapa banyak orang yang beli Laptop,lu bisa hitung dari banyaknya total penjualan buat hasil laptop doang | =SUMIF([Produk]); "Laptop": [Total Penjualan]) | 50                |
+| =SUMIFS  | ini sama aja kyak di atas tapi cuma nambahin beberapa kondisi tertentu aja                                                                                                                                                                                                                                         | intinya sama gw males nulis contohnya aja      | seriusan gw males |
+
+### Fungsi Statistik
+*ini biasanya dipake buat jumlahin data atau nge hasilin diagram kyak pivot tabel*
+
+| Fungsi   | Definisi                                                                                                                              | Contoh                                 | Output |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------ |
+| =AVARAGE | ini buat nge hasilin data rata-rata contohnya nilai raport lu biasanya pake ini rumus buat ngejumlahin nilai lu yang merah            | =AVARAGE([Nilai-Nilai Mata pelajaran]) | 90,1   |
+| =MIN     | dipake buat cari nilai terendah di nilai lu,gw lebih yakin nilai min nya ga bakal ketemu gegara terlalu banyak mines nya di raport lu | =MIN("70","75","90")                   | 70     |
+| =MEDIAN  | kalo yang ini di pake buat nge hasilin hasil median dari isi data lu(gw ga tau median apaan)                                          | =MEDIAN("90";"20";"30";"90";"70")      | 70     |
+| =COUNT   | ini buat ngedeteksi  mana aja data yang isinya value nomor                                                                            | =COUNT("90";"20";"A30B";"90";"70")     | 4      |
+### Fungsi Logikal
+*Fun fact: Fungsi Logikal diambil dari bahasa pemograman langsung kyak python dll, jadi lu pake excel sebenernya udah termasuk belajar bahasa pemograman loh*
+
+| Fungsi | Definisi                                                                                                                                                                                                                                                                     | Contoh                                                                | Output |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------ |
+| AND    | ngasih nilai TRUE misal semua kondisi itu TRUE,misalya ada 1 aja yang false,semuanya false                                                                                                                                                                                   | =AND([True];[True];[False])                                           | False  |
+| OR     | ngasih nilai TRUE kalo ada salah satu nya ada nilai True                                                                                                                                                                                                                     | =OR([True];[False];[False])                                           | True   |
+| IF     | ini biasanya yang sering dipake buat double rumus,misalnya **JIKA** kondisi fungsi itu hasilnya true return hasil true nya mau apa,sebaliknya misalnya False return data falsenya mau apa,misalnya lu belajar python atau rust lebih jauh lagi pasti bakal sering ketemu ini | lu coba aja sendiri ntar .guru/dosen lu juga ntar ngajarin gunanya if | Benar  |
+
+
+:::caution[kok gw dikasih ginian?]
+kenapa kok malah dikasih Cheatseet Exceel sama Spreadsheet sih?,kan gw mau belajar ngurusin Data gede pake SQL sama bikin diagram ERD nya,kenapa lu buat ginian?
+
+gw buat ini biar lu paham kalau yang orang lain ajarin di pendidikan tinggi itu ngajarin hal yang sebelumnya lu ga tau ,ibaratnya lu masih belajar jalan dosen/guru lu udah nyuruh lu berenang gaya olimpik yang dimana lu pasti keteteran,jadi gw ngasih tau pondasi dasar dari data, selain itu misalnya lu kerja juga ini bisa lebih kepake daripada lu belajar program banyak-banyak tapi lu ga dapet kerja (Kek gw),setidaknya walaupun kehidupan gw kacau tapi jangan sampe orang lain ngerasain apa yang gw rasain
+:::
+
