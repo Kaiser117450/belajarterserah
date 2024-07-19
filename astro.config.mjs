@@ -8,9 +8,6 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   integrations: [starlight({
     title: 'Belajarin Aja',
-    customCss: [
-    // Path to your Tailwind base styles:
-    './src/tailwind.css'],
     social: {
       github: 'https://github.com/withastro/starlight'
     },
