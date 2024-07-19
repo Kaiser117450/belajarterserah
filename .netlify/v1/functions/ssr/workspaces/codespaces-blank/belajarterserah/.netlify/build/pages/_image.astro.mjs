@@ -1,4 +1,4 @@
-import { g as getConfiguredImageService, i as imageConfig } from '../chunks/_astro_assets_DqMmfS3I.mjs';
+import { g as getConfiguredImageService, i as imageConfig } from '../chunks/_astro_assets_DeJilYq4.mjs';
 import { isRemotePath } from '@astrojs/internal-helpers/path';
 import * as mime from 'mrmime';
 import { i as isRemoteAllowed } from '../chunks/astro/assets-service_CiFlTZLk.mjs';

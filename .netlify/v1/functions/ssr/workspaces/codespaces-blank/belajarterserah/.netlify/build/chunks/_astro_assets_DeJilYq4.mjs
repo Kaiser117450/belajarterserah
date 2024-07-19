@@ -1,6 +1,6 @@
 import { A as AstroError, E as ExpectedImageOptions, g as ExpectedImage, h as ExpectedNotESMImage, r as resolveSrc, j as isRemoteImage, F as FailedToFetchRemoteImageDimensions, k as isESMImportedImage, l as isLocalService, D as DEFAULT_HASH_PROPS, m as InvalidImageService, n as ImageMissingAlt } from './astro/assets-service_CiFlTZLk.mjs';
 import '@astrojs/internal-helpers/path';
-import { c as createComponent, r as renderTemplate, m as maybeRenderHead, i as addAttribute, s as spreadAttributes, b as createAstro } from './astro/server_DIxRKkin.mjs';
+import { a as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, i as addAttribute, s as spreadAttributes } from './astro/server_C3JVK5K0.mjs';
 import * as mime from 'mrmime';
 import 'clsx';
 
@@ -904,7 +904,7 @@ async function getImage$1(options, imageConfig) {
   };
 }
 
-const $$Astro$1 = createAstro();
+const $$Astro$1 = createAstro("https://netlify.app");
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Image;
@@ -926,7 +926,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(additionalAttributes)}${spreadAttributes(image.attributes)}>`;
 }, "/workspaces/codespaces-blank/belajarterserah/node_modules/astro/components/Image.astro", void 0);
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://netlify.app");
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Picture;

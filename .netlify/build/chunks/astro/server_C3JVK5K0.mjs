@@ -63,7 +63,7 @@ function createAstro(site) {
   return {
     // TODO: this is no longer necessary for `Astro.site`
     // but it somehow allows working around caching issues in content collections for some tests
-    site: void 0,
+    site: new URL(site) ,
     generator: `Astro v${ASTRO_VERSION}`,
     glob: createAstroGlobFn()
   };
@@ -1741,4 +1741,4 @@ function createVNode(type, props) {
   return vnode;
 }
 
-export { AstroJSX as A, Fragment as F, __astro_tag_component__ as _, renderComponent as a, createAstro as b, createComponent as c, renderUniqueStylesheet as d, renderScriptElement as e, createHeadAndContent as f, renderSlot as g, defineStyleVars as h, addAttribute as i, renderHead as j, renderJSX as k, createVNode as l, maybeRenderHead as m, renderTemplate as r, spreadAttributes as s, unescapeHTML as u };
+export { AstroJSX as A, Fragment as F, __astro_tag_component__ as _, createAstro as a, renderComponent as b, createComponent as c, renderUniqueStylesheet as d, renderScriptElement as e, createHeadAndContent as f, renderSlot as g, defineStyleVars as h, addAttribute as i, renderHead as j, renderJSX as k, createVNode as l, maybeRenderHead as m, renderTemplate as r, spreadAttributes as s, unescapeHTML as u };
