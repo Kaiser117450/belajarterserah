@@ -11,12 +11,19 @@ export default defineConfig({
     social: {
       github: 'https://github.com/withastro/starlight'
     },
-    sidebar: [{
-      label: 'Belajar BIG DATA',
-      autogenerate: {
-        directory: 'reference'
-      }
-    }]
+      sidebar: [
+        
+        {
+          label: 'Belajar BIG DATA',
+          autogenerate: { directory: 'reference' },
+        },
+        {
+          label: 'Belajar Jadi hengker',
+          autogenerate: { directory: 'hack' },
+        },
+      ],
+
+    
   }), 
   tailwind()],
   output: "server",
